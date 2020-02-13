@@ -222,7 +222,7 @@ module.exports = function( THREE ) {
 			document.removeEventListener( 'mousemove', onMouseMove, false );
 			document.removeEventListener( 'mouseup', onMouseUp, false );
 
-			window.removeEventListener( 'keydown', onKeyDown, false );
+			//window.removeEventListener( 'keydown', onKeyDown, false );
 
 			//scope.dispatchEvent( { type: 'dispose' } ); // should this be added here?
 
@@ -757,6 +757,8 @@ module.exports = function( THREE ) {
 
 		}
 
+		this.onKeyDown = onKeyDown;
+
 		function onTouchStart( event ) {
 
 			if ( scope.enabled === false ) return;
@@ -880,7 +882,7 @@ module.exports = function( THREE ) {
 		scope.domElement.addEventListener( 'touchend', onTouchEnd, false );
 		scope.domElement.addEventListener( 'touchmove', onTouchMove, false );
 
-		window.addEventListener( 'keydown', onKeyDown, false );
+		//window.addEventListener( 'keydown', onKeyDown, false );
 
 		// force an update at start
 
